@@ -10,6 +10,7 @@ public class AppController {
      * @param Userlist
      * @return
      */
+
     public boolean logIn(User User,String eMail, String password, ArrayList<User> Userlist){
         // decrypt password method
         User isUser = Userlist.get(Userlist.indexOf(User));
