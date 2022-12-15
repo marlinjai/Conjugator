@@ -16,4 +16,5 @@ class AppControllerTest {
         User testUser1 = new User("Anton","Zimmermann", "1234","A.Zimmermann@Zmail.de");
         assertFalse(testCtrl.logIn(testUser1, "A.Zimmermann@Zmail.de", "6243", Database.Userlist));
     }
+
 }
