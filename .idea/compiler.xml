@@ -4,8 +4,5 @@
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
-    <bytecodeTargetLevel>
-      <module name="Conjugator" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
