@@ -17,4 +17,6 @@ public class FlashcardTest {
         assertEquals("blue", flashcards.get(1).getWord());
         assertEquals("rojo", flashcards.get(0).getTranslation());
     }
+
+
 }
