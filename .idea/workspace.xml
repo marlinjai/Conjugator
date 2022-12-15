@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="Testing" />
+    <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="Testing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WordListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordListTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,12 +46,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
-  <component name="RunManager" selected="TestNG.FlashcardTest.testGetFlashcards">
+  <component name="RunManager" selected="JUnit.WordListTest.testAddTranslation">
     <configuration name="WordListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Conjugator" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FlashcardTest.testGetFlashcards" />
         <item itemvalue="JUnit.WordListTest.testAddTranslation" />
+        <item itemvalue="TestNG.FlashcardTest.testGetFlashcards" />
         <item itemvalue="JUnit.WordListTest" />
       </list>
     </recent_temporary>
