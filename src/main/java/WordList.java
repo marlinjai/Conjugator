@@ -8,6 +8,12 @@ public class WordList {
     private String category;
     private Map <String, String> translationMap;
 
+    /**
+     *
+     * @param name
+     * @param category
+     */
+
     public WordList(String name, String category) {
         this.name = name;
         this.category = category;
@@ -18,8 +24,8 @@ public class WordList {
         translationMap.put(word, translation);
     }
 
-    public List<Flashcard> getFlashcards() {
-        List<Flashcard> flashcards = new ArrayList<>();
+    public List <Flashcard> getFlashcards() {
+        List <Flashcard> flashcards = new ArrayList<Flashcard>();
         for (Map.Entry<String, String> entry : translationMap.entrySet()) {
             flashcards.add(new Flashcard(entry.getKey(), entry.getValue()));
         }
