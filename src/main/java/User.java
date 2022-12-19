@@ -4,11 +4,21 @@ public class User {
     String password;
     String eMailAddress;
 
+    String salt;
+
+    /**
+     * unclear if saving the salt like that is secure
+     * @param firstName
+     * @param lastName
+     * @param password
+     * @param eMailAddress
+     */
     public User(String firstName, String lastName, String password, String eMailAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
         this.eMailAddress = eMailAddress;
+        this.salt = AppCtrl.genSalt();
+        this.password = AppCtrl.securePW(password, salt);
         Database.Userlist.add(this);
     }
 
