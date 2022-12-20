@@ -9,6 +9,7 @@ public class WordList {
     private Map <String, String> translationMap;
 
     /**
+     * @author Mai
      *
      * @param name
      * @param category

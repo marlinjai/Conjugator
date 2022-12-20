@@ -2,6 +2,11 @@ public class Flashcard {
     private String word;
     private String translation;
 
+    /**
+     * @author Mai
+     * @param word
+     * @param translation
+     */
 
     public Flashcard(String word, String translation) {
         this.word = word;

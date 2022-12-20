@@ -39,6 +39,7 @@ public class Main {
             System.out.println("english_word: translated_word");
             System.out.println("Enter an empty line to finish the list.");
 
+
             // Read the translated words from the user and add them to the map
             while (true) {
                 System.out.print(">> ");
@@ -61,6 +62,10 @@ public class Main {
 
             // Add the list of translated words to the main map
             translations.put(name, list);
+
+
+
+
         }
 
         // Print the translated words
