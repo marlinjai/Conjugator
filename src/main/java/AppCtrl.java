@@ -1,4 +1,5 @@
 import java.awt.datatransfer.StringSelection;
+import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.security.MessageDigest;
@@ -19,6 +20,18 @@ public class AppCtrl {
         // decrypt password method
         User isUser = Userlist.get(Userlist.indexOf(User));
         return eMail.equals(isUser.eMailAddress) && securePW(password, isUser.salt).equals(isUser.password);
+    }
+
+    /**
+     * The values for this Method should be taken from the registerform of the user, otherwise it would be useless
+     * to write a method that calls a builder which is then creating the actual object.
+     * @param eMail
+     * @param password
+     * @param firstName
+     * @param lastName
+     */
+    public static void registerUser(String eMail, String password, String firstName, String lastName){
+        new User.UserBuilder(eMail,password).setFirstName(firstName).setLastName(lastName).build();
     }
 
     /**
