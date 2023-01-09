@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 /.idea/
 .idea/workspace.xml
-=======
 .DS_Store
 .idea/
 src/.DS_Store
 conjugator.iml
->>>>>>> master
