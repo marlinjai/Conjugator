@@ -31,7 +31,17 @@ public class AppCtrl {
      * @param lastName
      */
     public static void registerUser(String eMail, String password, String firstName, String lastName){
+        checkMail(eMail);
         new User.UserBuilder(eMail,password).setFirstName(firstName).setLastName(lastName).build();
+    }
+
+    /**
+     * checks if the given Mail is valid with regEx
+     * @param eMail
+     * @return
+     */
+    public static boolean  checkMail(String eMail){
+        return eMail.matches("[a-zA-Z0-9!§$%&=?.,_-]*@[a-zA-Z0-9!§$%&=?.,_-]*.[a-zA-Z0-9!§$%&=?.,_-]*");
     }
 
     /**

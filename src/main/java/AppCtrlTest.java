@@ -13,6 +13,12 @@ class AppCtrlTest {
         assertEquals("Hammermann", Database.Userlist.get(Database.Userlist.size()-1).getLastName());
     }
     @Test
+    void checkMail(){
+        assertTrue(AppCtrl.checkMail("testmail@jnihtroegkfds.de"));
+        assertTrue(AppCtrl.checkMail("tes_tmail!§$%&=?.,-@jnihtroegmrsgn.chkfds.de"));
+        assertFalse(AppCtrl.checkMail("testmailjnihtroegkfds.de"));
+    }
+    @Test
     void logInCorrectData() {
         //User testUser1 = new User("Anton","Zimmermann", "1234","A.Zimmermann@Zmail.de");
         User testUser1 = new User.UserBuilder("M.Mustermann@Cmail.de","5678")
