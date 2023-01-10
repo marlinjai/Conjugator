@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="Testing">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.jade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Conjugator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Conjugator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FrontendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontendController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteDatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteDatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.jade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FrontendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FrontendController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RemoteDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/styles/material-kit-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/styles/material-kit-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.jade" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673349282912</updated>
-      <workItem from="1673349284643" duration="8149000" />
+      <workItem from="1673349284643" duration="9097000" />
     </task>
     <servers />
   </component>
@@ -131,7 +122,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/FrontendController.java</url>
-          <line>67</line>
+          <line>69</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
