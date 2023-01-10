@@ -45,7 +45,8 @@ public class User {
          * @param password
          */
         public UserBuilder(String eMailAddress,String password) {
-            this.eMailAddress = eMailAddress;
+            if(AppCtrl.checkMail(eMailAddress)) this.eMailAddress = eMailAddress;
+            else // boolean invalidMail;
             this.salt = AppCtrl.genSalt();
             this.password = AppCtrl.securePW(password, salt);
 
