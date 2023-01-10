@@ -40,17 +40,17 @@ html(lang='en' itemscope='' itemtype='http://schema.org/WebPage')
                                                 a.btn.btn-link.px-3(href='javascript:;')
                                                     i.fa.fa-google.text-white.text-lg
                                 .card-body
-                                    form.text-start(role='form')
+                                    form.text-start(role='form' action="/submit-login" method="post")
                                         .input-group.input-group-outline.my-3
                                             label.form-label Email
-                                            input.form-control(type='email')
+                                            input.form-control(name="email" type="email" )
                                         .input-group.input-group-outline.mb-3
                                             label.form-label Password
-                                            input.form-control(type='password')
+                                            input.form-control(name="password" type="password" )
                                         .form-check.form-switch.d-flex.align-items-center.mb-3
                                             input#rememberMe.form-check-input(type='checkbox' checked='')
                                             label.form-check-label.mb-0.ms-3(for='rememberMe') Remember me
                                         .text-center
-                                            button.btn.bg-gradient-primary.w-100.my-4.mb-2(type='button') Sign in
+                                            button.btn.bg-gradient-primary.w-100.my-4.mb-2(type='submit' value="submit") Sign in
                                         p.mt-4.text-sm.text-center
                                             | Don't have an account?

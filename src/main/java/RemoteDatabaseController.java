@@ -1,47 +1,120 @@
 import java.sql.*;
 
 
-public class RemoteDatabase {
+public class RemoteDatabaseController {
     /**
      * This method is used to connect to a remote PostgreSQL database on my server.
-     * @param args
+     * It uses the
+     * @param SQLStatement
+     * to fetch data from the DB using the SQLStatement provided.
      */
-        public static void main(String[] args) {
-            // Replace with your database name, username, and password
-            String dbName = "whizartc_Info_III_conjugator_DB";
-            String userName = "whizartc_marlinjai";
-            String password = "C5D7X7iNun%!@MHqm";
 
-            // The URL that will connect to the database.
-            // You may need to change "localhost" to the name or IP address of your server.
-            String url = "jdbc:postgresql://nl1-ts101.a2hosting.com/" + dbName;
+    public void insertData(String SQLStatement)
+    {
+        String dbName = "whizartc_Info_III_conjugator_DB";
+        String userName = "whizartc_marlinjai";
+        String password = "C5D7X7iNun%!@MHqm";
 
-            try {
-                // Load the PostgreSQL JDBC driver
-                Class.forName("org.postgresql.Driver");
+        // The URL that will connect to the database.
+        // You may need to change "localhost" to the name or IP address of your server.
+        String url = "jdbc:postgresql://nl1-ts101.a2hosting.com/" + dbName;
+        ResultSet rs = null;
+        try {
+            // Load the PostgreSQL JDBC driver
+            Class.forName("org.postgresql.Driver");
 
-                // Connect to the database
-                Connection conn = DriverManager.getConnection(url, userName, password);
-                System.out.println("connection established successfully");
-                // Do something with the connection here...
-                Statement stmt = conn.createStatement();
+            // Connect to the database
+            Connection conn = DriverManager.getConnection(url, userName, password);
+            System.out.println("connection established successfully");
+            // Do something with the connection here...
+            Statement stmt = conn.createStatement();
 
-                // Execute a query
-                String query = "create table users.userdata (\n" +
-                        "userid int Primary Key,\n" +
-                        "username varchar(30),\n" +
-                        "password varchar(25)\n" +
-                        "); ";
+            // Execute a query
+            String query = SQLStatement;
 
-                ResultSet rs = stmt.executeQuery(query);
+            rs = stmt.executeQuery(query);
 
-                // Close the connection
-                conn.close();
-            } catch (ClassNotFoundException e) {
-                // Could not find the database driver
-            } catch (SQLException e) {
-                // Could not connect to the database
-            }
+            // Close the connection
+            conn.close();
+        } catch (ClassNotFoundException e) {
+            // Could not find the database driver
+        } catch (SQLException e) {
+            // Could not connect to the database
         }
     }
+    public ResultSet fetchData(String SQLStatement) {
+        String dbName = "whizartc_Info_III_conjugator_DB";
+        String userName = "whizartc_marlinjai";
+        String password = "C5D7X7iNun%!@MHqm";
+
+        // The URL that will connect to the database.
+        // You may need to change "localhost" to the name or IP address of your server.
+        String url = "jdbc:postgresql://nl1-ts101.a2hosting.com/" + dbName;
+        ResultSet rs = null;
+        try {
+            // Load the PostgreSQL JDBC driver
+            Class.forName("org.postgresql.Driver");
+
+            // Connect to the database
+            Connection conn = DriverManager.getConnection(url, userName, password);
+            System.out.println("connection established successfully");
+            // Do something with the connection here...
+            Statement stmt = conn.createStatement();
+
+            // Execute a query
+            String query = SQLStatement;
+
+            rs = stmt.executeQuery(query);
+
+            // Close the connection
+            conn.close();
+        } catch (ClassNotFoundException e) {
+            // Could not find the database driver
+        } catch (SQLException e) {
+            // Could not connect to the database
+        }
+
+        return rs;
+
+    }
+
+
+    public static void main(String[] args) {
+        // Replace with your database name, username, and password
+        String dbName = "whizartc_Info_III_conjugator_DB";
+        String userName = "whizartc_marlinjai";
+        String password = "C5D7X7iNun%!@MHqm";
+
+        // The URL that will connect to the database.
+        // You may need to change "localhost" to the name or IP address of your server.
+        String url = "jdbc:postgresql://nl1-ts101.a2hosting.com/" + dbName;
+
+        try {
+            // Load the PostgreSQL JDBC driver
+            Class.forName("org.postgresql.Driver");
+
+            // Connect to the database
+            Connection conn = DriverManager.getConnection(url, userName, password);
+            System.out.println("connection established successfully");
+            // Do something with the connection here...
+            Statement stmt = conn.createStatement();
+
+            // Execute a query
+            String query = "create table users.userdata (\n" +
+                    "userid int Primary Key,\n" +
+                    "username varchar(30),\n" +
+                    "password varchar(25)\n" +
+                    "); ";
+
+            ResultSet rs = stmt.executeQuery(query);
+
+            // Close the connection
+            conn.close();
+        } catch (ClassNotFoundException e) {
+            // Could not find the database driver
+        } catch (SQLException e) {
+            // Could not connect to the database
+        }
+    }
+}
 

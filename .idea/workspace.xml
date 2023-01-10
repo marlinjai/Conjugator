@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FrontendController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/styles/material-kit-pro.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/styles/nucleo-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/styles/nucleo-svg.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.jade" afterDir="false" />
+    <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="Testing">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.jade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conjugator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Conjugator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AppCtrlTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FlashcardTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WordListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrontendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteDatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteDatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FrontendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FrontendController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RemoteDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/styles/material-kit-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/styles/material-kit-pro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.jade" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +48,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4643678",
@@ -59,6 +64,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/styles" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -75,8 +82,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoteDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RemoteDatabase" />
+    <configuration name="RemoteDatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RemoteDatabaseController" />
       <module name="Conjugator" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,12 +92,24 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FrontendController" />
-        <item itemvalue="Application.RemoteDatabase" />
+        <item itemvalue="Application.RemoteDatabaseController" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="Testing" />
+      <created>1673349282912</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673349282912</updated>
+      <workItem from="1673349284643" duration="8149000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -110,6 +129,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/FrontendController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
