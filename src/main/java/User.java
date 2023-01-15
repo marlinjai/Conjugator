@@ -16,7 +16,7 @@ public class User {
         this.eMailAddress = builder.eMailAddress;
         this.salt = builder.salt;
         this.password = builder.password;
-        Database.Userlist.add(this);
+        //Database.Userlist.add(this);
     }
     public String getFirstName() {
         return firstName;
@@ -46,7 +46,7 @@ public class User {
          */
         public UserBuilder(String eMailAddress,String password) {
             if(AppCtrl.checkMail(eMailAddress)) this.eMailAddress = eMailAddress;
-            else // boolean invalidMail;
+            //else // boolean invalidMail;
             this.salt = AppCtrl.genSalt();
             this.password = AppCtrl.securePW(password, salt);
 

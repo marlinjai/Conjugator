@@ -49,16 +49,20 @@ public class FrontendController {
 
         post("/submit-registration", (request, response) -> {
 
-            String nameInit = request.queryParams("name");
+            String firstNameInit = request.queryParams("name");
+            String lastNameInit = null;
             String passwordInit = request.queryParams("password");
             String emailInit= request.queryParams("email");
             // Do something with the data
-            //if ()
+
             System.out.println("Password: " + passwordInit);
             System.out.println("Email: " + emailInit);
-            System.out.println("Name: "+ nameInit);
+            System.out.println("Name: "+ firstNameInit);
 
+            User newUser =  new User.UserBuilder(emailInit,passwordInit).setFirstName(firstNameInit).setLastName(lastNameInit).build();
 
+            RemoteDatabaseController userDBController = new RemoteDatabaseController();
+            userDBController.insertNewUserToDB(newUser.getFirstName(),newUser.getLastName(),newUser.getPassword(),newUser.geteMailAddress(),newUser.salt);
 
             return "registration successful";
 

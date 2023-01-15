@@ -33,6 +33,7 @@ public class AppCtrl {
     public static void registerUser(String eMail, String password, String firstName, String lastName){
         checkMail(eMail);
         new User.UserBuilder(eMail,password).setFirstName(firstName).setLastName(lastName).build();
+
     }
 
     /**
