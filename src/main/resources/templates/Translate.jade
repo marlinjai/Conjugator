@@ -1,0 +1,62 @@
+include NavbarTransparent
+tobody
+#translator
+    h2 Simple Translator
+    form
+        textarea#input
+        br
+        label(for='language') Select language:
+        select#language
+            option(value='en') English
+            option(value='fr') French
+            option(value='de') German
+            option(value='es') Spanish
+        br
+        br
+        button#translate Translate
+    br
+    br
+    h3 Translation:
+    p#output
+script(type="text/javascript").
+    const input = document.getElementById("input");
+    const language = document.getElementById("language");
+    const translateButton = document.getElementById("translate");
+    const output = document.getElementById("output");
+
+    translateButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        let text = input.value;
+        let targetLan = language.value;
+
+        let translationData = {
+            textData: text,
+            targetLanguage: targetLan
+        };
+
+        fetch("/submit-translation", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(translationData)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the response from the server
+                console.log(data);
+            })
+            .catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
+            });
+        console.log(translationData);
+
+
+        // In this example, we will just display the text in the output element
+        output.textContent = `Translated to ${targetLan}: ${text}`;
+    });

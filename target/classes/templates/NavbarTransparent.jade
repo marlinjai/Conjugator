@@ -1,0 +1,83 @@
+// Navbar Transparent
+include Head
+body
+        nav.navbar.navbar-expand-lg.position-absolute.top-0.z-index-3.w-100.navbar-transparent
+            .container-fluid.px-0
+                img.navbar-brand(href="http://localhost:4567/home" src='/Graphics/Conjugator Logo new transparent.png' alt='Brand Image')
+                button.navbar-toggler.shadow-none.ms-md-2(type='button' data-bs-toggle='collapse' data-bs-target='#navigation' aria-controls='navigation' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon.mt-2
+                        span.navbar-toggler-bar.bar1
+                        span.navbar-toggler-bar.bar2
+                        span.navbar-toggler-bar.bar3
+                #navigation.collapse.navbar-collapse.w-100.pt-3.pb-2.py-lg-0
+                    ul.navbar-nav.navbar-nav-hover.ms-auto
+                        li.nav-item.dropdown.dropdown-hover.mx-2
+                            a#dropdownMenuPages.nav-link.ps-2.d-flex.cursor-pointer.align-items-center(href="http://localhost:4567/home")
+                                i.material-icons.opacity-6.me-2.text-md dashboard
+                                | Home
+                        li.nav-item.dropdown.dropdown-hover.mx-2
+                            a#dropdownMenuAccount.nav-link.ps-2.d-flex.cursor-pointer.align-items-center(role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                i.material-icons.opacity-6.me-2.text-md contacts
+                                | Account
+                                img.arrow.ms-2.d-lg-block.d-none(src=' ./assets/img/down-arrow-dark.svg  ' alt='down-arrow')
+                                img.arrow.ms-1.d-lg-none.d-block.ms-auto(src='./assets/img/down-arrow-dark.svg' alt='down-arrow')
+                            .dropdown-menu.dropdown-menu-animation.dropdown-md.border-radius-xl.p-3.mt-0.mt-lg-3(aria-labelledby='dropdownMenuAccount')
+                                .d-none.d-lg-flex
+                                    ul.list-group.w-100
+                                        li.nav-item.dropdown.dropdown-hover.dropdown-subitem.list-group-item.border-0.p-0
+                                            a#dropdownSignIn.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1(href='http://localhost:4567/login')
+                                                span Sign In
+
+                                        li.nav-item.dropdown.dropdown-hover.dropdown-subitem.list-group-item.border-0.p-0
+                                            a#dropdownSignUp.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1(href='http://localhost:4567/registration')
+                                                span Sign Up
+
+                                        li.nav-item.dropdown.dropdown-hover.dropdown-subitem.list-group-item.border-0.p-0
+                                            a#dropdownPasswordReset.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1
+                                                span Password Reset
+
+                                        li.nav-item.list-group-item.border-0.p-0
+                                            a.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1(href='./pages/2fa-security.html')
+                                                span 2FA Security
+                                .row.d-lg-none
+                                    .col-12.d-flex.justify-content-center.flex-column
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.px-0(href='http://localhost:4567/login')
+                                            | Sign In
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.mt-3.px-0(href='http://localhost:4567/registration')
+                                            | Sign Up
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.mt-3.px-0(href='http://localhost:4567/login')
+                                            | Password Reset
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.mt-3.px-0(href='./pages/2fa-security.html')
+                                            | 2FA Security
+
+                        li.nav-item.dropdown.dropdown-hover.mx-2
+                            a#dropdownMenuBlocks.nav-link.ps-2.d-flex.cursor-pointer.align-items-center( data-bs-toggle='dropdown' aria-expanded='false')
+                                i.material-icons.opacity-6.me-2.text-md view_day
+                                | Lists
+                                img.arrow.ms-2.d-lg-block.d-none(src=' ./assets/img/down-arrow-dark.svg  ' alt='down-arrow')
+                                img.arrow.ms-1.d-lg-none.d-block.ms-auto(src='./assets/img/down-arrow-dark.svg' alt='down-arrow')
+                            .dropdown-menu.dropdown-menu-end.dropdown-menu-animation.dropdown-md.dropdown-md-responsive.p-3.border-radius-lg.mt-0.mt-lg-3(aria-labelledby='dropdownMenuBlocks')
+                                .d-none.d-lg-block
+                                    ul.list-group
+                                        li.nav-item.dropdown.dropdown-hover.dropdown-subitem.list-group-item.border-0.p-0
+                                            a.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1
+                                                span Category Lists
+                                        li.nav-item.dropdown.dropdown-hover.dropdown-subitem.list-group-item.border-0.p-0
+                                            a.dropdown-item.border-radius-md.text-dark.ps-3.d-flex.align-items-center.mb-1
+                                                span Personal Lists
+                                .row.d-lg-none
+                                    .col-12.d-flex.justify-content-center.flex-column
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.mt-3.px-0
+                                            | Category Lists
+                                        a.dropdown-header.text-dark.font-weight-bolder.d-flex.justify-content-cente.align-items-center.mt-3.px-0(href='./pages/2fa-security.html')
+                                            | Personal Lists
+
+                        li.nav-item.dropdown.dropdown-hover.mx-2
+                            a#dropdownMenuDocs.nav-link.ps-2.d-flex.cursor-pointer.align-items-center(href="http://localhost:4567/translate")
+                                i.material-icons.opacity-6.me-2.text-md article
+                                | Translate
+
+
+
+
+// End Navbar

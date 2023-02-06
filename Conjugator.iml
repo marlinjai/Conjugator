@@ -59,5 +59,7 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm-util:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
+    <orderEntry type="library" name="squareup.okhttp3.okhttp1" level="project" />
+    <orderEntry type="library" name="google.code.gson" level="project" />
   </component>
 </module>
