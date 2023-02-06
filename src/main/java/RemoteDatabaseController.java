@@ -82,7 +82,7 @@ public class RemoteDatabaseController {
 
     public void insertNewUserToDB(String firstNameInit, String lastNameInit, String passwordInit, String emailInit, String salt) {
 
-        String statement = "'"+totalUserNumber+"', "+"'"+emailInit+"', "+"'"+salt+"', "+"'"+passwordInit+"', "+"'"+firstNameInit+"', "+"'"+lastNameInit+"'";
+        String statement = "'"+emailInit+"', "+"'"+salt+"', "+"'"+passwordInit+"', "+"'"+firstNameInit+"', "+"'"+lastNameInit+"'";
         this.insertData(
                 "insert into users.userdata values (\n" +
                         statement +
@@ -113,8 +113,7 @@ public class RemoteDatabaseController {
 
             // Execute a query
             String query = "create table users.userdata (\n" +
-                    "userid int Primary Key,\n" +
-                    "Email varchar(30),\n" +
+                    "Email varchar(50),\n" +
                     "Salt varchar(25),\n" +
                     "password varchar(75),\n" +
                     "firstname varchar(30),\n" +
@@ -134,6 +133,7 @@ public class RemoteDatabaseController {
 
     public static void main(String[] args) {
         RemoteDatabaseController tableCreator = new RemoteDatabaseController();
+        tableCreator.fetchData("drop table users.userdata;");
         tableCreator.createInitialUserTable();
     }
 }
