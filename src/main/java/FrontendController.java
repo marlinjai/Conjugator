@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import javafx.css.CssParser;
 import spark.ModelAndView;
 import spark.template.jade.JadeTemplateEngine;
@@ -11,26 +12,15 @@ public class FrontendController {
     public static void main(String[] args) {
         staticFileLocation("public");
 
-        get("/", (req, res) -> {
-            return "hello <b>HTW</b>";
-        });
-        // http://localhost:4567/hello/berta
-        get("/hello/:name", (req, res) -> {
-            return "hello, " + req.params(":name");
-        });
-        // http://localhost:4567/hello?name=dora
-        get("/hello", (req, res) -> {
-            return "hello, " + req.queryParams("name");
-        });
-        // http://localhost:4567/clock
-        get("/clock", (req, res) -> {
-            long time = System.currentTimeMillis();
+
+        // http://localhost:4567/home
+        get("/home", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("time", time);
-            ModelAndView modelAndView = new ModelAndView(model, "clock");
+            ModelAndView modelAndView = new ModelAndView(model, "home");
             return modelAndView;
         }, new JadeTemplateEngine());
-        // http://localhost:4567/login
+
+
         // http://localhost:4567/login
 
         get("/login", (req, res) -> {
@@ -52,17 +42,17 @@ public class FrontendController {
             String firstNameInit = request.queryParams("name");
             String lastNameInit = null;
             String passwordInit = request.queryParams("password");
-            String emailInit= request.queryParams("email");
+            String emailInit = request.queryParams("email");
             // Do something with the data
 
             System.out.println("Password: " + passwordInit);
             System.out.println("Email: " + emailInit);
-            System.out.println("Name: "+ firstNameInit);
+            System.out.println("Name: " + firstNameInit);
 
-            User newUser =  new User.UserBuilder(emailInit,passwordInit).setFirstName(firstNameInit).setLastName(lastNameInit).build();
+            User newUser = new User.UserBuilder(emailInit, passwordInit).setFirstName(firstNameInit).setLastName(lastNameInit).build();
 
             RemoteDatabaseController userDBController = new RemoteDatabaseController();
-            userDBController.insertNewUserToDB(newUser.getFirstName(),newUser.getLastName(),newUser.getPassword(),newUser.geteMailAddress(),newUser.salt);
+            userDBController.insertNewUserToDB(newUser.getFirstName(), newUser.getLastName(), newUser.getPassword(), newUser.geteMailAddress(), newUser.salt);
 
             return "registration successful";
 
@@ -72,18 +62,67 @@ public class FrontendController {
 
             String password = request.queryParams("password");
             String email = request.queryParams("email");
-            // Do something with the data
-            //if ()
+
+
+
             System.out.println("Password: " + password);
             System.out.println("Email: " + email);
 
             return "password correct";
 
         });
-       /*
-       post("/sample", (req, res) -> {
-           return "handled post request";
-       });
-        */
+
+        // http://localhost:4567/category-lists
+
+        get("/category-lists", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            ModelAndView modelAndView = new ModelAndView(model, "categoryLists");
+            return modelAndView;
+        }, new JadeTemplateEngine());
+
+
+        // http://localhost:4567/personal-lists
+
+        get("/personal-lists", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            ModelAndView modelAndView = new ModelAndView(model, "personalLists");
+            return modelAndView;
+        }, new JadeTemplateEngine());
+
+        // http://localhost:4567/translate
+
+        get("/translate", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            ModelAndView modelAndView = new ModelAndView(model, "Translate");
+            return modelAndView;
+        }, new JadeTemplateEngine());
+
+
+        post("/submit-translation", (request, response) -> {
+            Gson gson = new Gson();
+
+            //System.out.println(request.body());
+            System.out.println("Content-Type header: " + request.headers("Content-Type"));
+            System.out.println("Request Body: " + request.body());
+
+            TranslationData userData = gson.fromJson(request.body(), TranslationData.class);
+
+
+            DeepLTranslator translator = new DeepLTranslator();
+            System.out.println(userData.targetLanguage);
+            DeepLTranslator.TargetLanguages tg = DeepLTranslator.TargetLanguages.VarLanguage;
+            tg.setCode(userData.targetLanguage);
+            Translation ret = translator.translateME(userData.textData, tg);
+            String printToClient = "";
+
+            Map<String, String> responseData = new HashMap<>();
+            responseData.put("transalted:", printToClient);
+
+
+            // Return the response data as JSON
+            response.type("application/json");
+            return gson.toJson(responseData);
+        });
+
     }
 }
