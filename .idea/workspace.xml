@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DeepLTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Translation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TranslationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Clock.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Head.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/HomepageFirst.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/NavbarTransparent.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Translate.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categoryLists.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/header.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/personalLists.jade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conjugator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Conjugator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles/material-kit-pro.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles/nucleo-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles/nucleo-svg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.jade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.jade" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.jade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.jade" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.jade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.jade" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.jade" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.19858158",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19858158&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -124,6 +105,7 @@
       <updated>1673349282912</updated>
       <workItem from="1673349284643" duration="9097000" />
       <workItem from="1675723800081" duration="919000" />
+      <workItem from="1675727815894" duration="54000" />
     </task>
     <servers />
   </component>

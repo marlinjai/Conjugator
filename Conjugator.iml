@@ -8,13 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/libraries" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="postgresql" level="project" />
-    <orderEntry type="library" name="42d5adcbca" level="application" />
     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
@@ -59,7 +56,8 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm-util:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
-    <orderEntry type="library" name="squareup.okhttp3.okhttp1" level="project" />
-    <orderEntry type="library" name="google.code.gson" level="project" />
+    <orderEntry type="library" name="squareup.okhttp3.okhttp2" level="project" />
+    <orderEntry type="library" name="google.code.gson1" level="project" />
+    <orderEntry type="library" name="google.code.maven.play.plugin.postgresql" level="project" />
   </component>
 </module>
