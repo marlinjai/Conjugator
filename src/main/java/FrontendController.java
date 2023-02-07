@@ -3,6 +3,8 @@ import javafx.css.CssParser;
 import spark.ModelAndView;
 import spark.template.jade.JadeTemplateEngine;
 
+import java.io.StringReader;
+import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +13,7 @@ import static spark.Spark.*;
 public class FrontendController {
     public static void main(String[] args) {
         staticFileLocation("public");
-
+        RemoteDatabaseController userDBController = new RemoteDatabaseController();
 
         // http://localhost:4567/home
         get("/home", (req, res) -> {
@@ -51,7 +53,6 @@ public class FrontendController {
 
             User newUser = new User.UserBuilder(emailInit, passwordInit).setFirstName(firstNameInit).setLastName(lastNameInit).build();
 
-            RemoteDatabaseController userDBController = new RemoteDatabaseController();
             userDBController.insertNewUserToDB(newUser.getFirstName(), newUser.getLastName(), newUser.getPassword(), newUser.geteMailAddress(), newUser.salt);
 
             return "registration successful";
@@ -63,12 +64,18 @@ public class FrontendController {
             String password = request.queryParams("password");
             String email = request.queryParams("email");
 
+            ResultSet login = userDBController.fetchData("Select salt AS Salz,PASSWORD AS Passwort from users.userdata where email like '"+email+"';");
+            String pwFromDB = "";
+            String salz = "";
+            while (login.next()) {
+                pwFromDB = login.getString("passwort");
+                salz = login.getString("salz");
 
+            }
+            String hashedPWToCheck = AppCtrl.securePW(password,salz);
+            if (hashedPWToCheck.equals(pwFromDB)){return "password correct";}
+            else{ return "password false";}
 
-            System.out.println("Password: " + password);
-            System.out.println("Email: " + email);
-
-            return "password correct";
 
         });
 
@@ -109,10 +116,10 @@ public class FrontendController {
 
 
             DeepLTranslator translator = new DeepLTranslator();
-            System.out.println(userData.targetLanguage);
+            if (userData != null)System.out.println(userData.targetLanguage);
             DeepLTranslator.TargetLanguages tg = DeepLTranslator.TargetLanguages.VarLanguage;
             tg.setCode(userData.targetLanguage);
-            Translation ret = translator.translateME(userData.textData, tg);
+            String ret = translator.translateME(userData.textData, tg);
             String printToClient = "";
 
             Map<String, String> responseData = new HashMap<>();

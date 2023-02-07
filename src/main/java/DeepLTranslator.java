@@ -1,9 +1,9 @@
-
-
 import com.google.gson.Gson;
 import okhttp3.*;
 
 import java.io.IOException;
+
+
 
 public class DeepLTranslator {
     private static final String API_URL = "https://api-free.deepl.com/v2/translate";
@@ -45,7 +45,7 @@ public class DeepLTranslator {
     }
 
 
-    public Translation translateME(Object toTranslate, TargetLanguages language) throws IOException {
+    public String translateME(Object toTranslate, TargetLanguages language) throws IOException {
         String responseString;
         Translation done;
         Gson gson = new Gson();
@@ -53,8 +53,9 @@ public class DeepLTranslator {
         if (toTranslate instanceof String) {
             String[] trans = new String[1];
             trans[0] = (String) toTranslate;
-            OkHttpClient client = new OkHttpClient();
             MediaType mediaType = MediaType.parse("application/json");
+
+            OkHttpClient client = new OkHttpClient();
 
             //creating a request object
             Request request = new Request.Builder()
@@ -65,15 +66,16 @@ public class DeepLTranslator {
                     .build();
 
             Response response = client.newCall(request).execute();
-            done = gson.fromJson(response.body().string(),Translation.class);
+            // done = gson.fromJson(response.body().string(),Translation.class);
 
             responseString = response.body().string();
             System.out.println(responseString);
-            return done;
+            return responseString;
 
         } else if (toTranslate instanceof String[]) {
-            OkHttpClient client = new OkHttpClient();
             MediaType mediaType = MediaType.parse("application/json");
+
+            OkHttpClient client = new OkHttpClient();
 
             //creating a request object
             Request request = new Request.Builder()
@@ -84,10 +86,13 @@ public class DeepLTranslator {
                     .build();
 
             Response response = client.newCall(request).execute();
-            done = gson.fromJson(response.body().string(),Translation.class);
+            //done = gson
+
             responseString = response.body().string();
             System.out.println(responseString);
-            return done;
+            return responseString;
+
+
 
         } else {
             throw new IOException("The passed parameter is not a String or String Array!");
@@ -95,5 +100,12 @@ public class DeepLTranslator {
 
     }
 
-
+    public static void main(String[] args) {
+        DeepLTranslator translator = new DeepLTranslator();
+        try {
+            String ret = translator.translateME("Katze", TargetLanguages.English);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -39,6 +39,8 @@ public class User {
         String firstName;
         String lastName;
 
+        boolean hasValidEmail;
+
         /**
          * factory class to build a user with more clarity
          * @param eMailAddress
@@ -46,7 +48,7 @@ public class User {
          */
         public UserBuilder(String eMailAddress,String password) {
             if(AppCtrl.checkMail(eMailAddress)) this.eMailAddress = eMailAddress;
-            //else // boolean invalidMail;
+            else this.hasValidEmail = false;
             this.salt = AppCtrl.genSalt();
             this.password = AppCtrl.securePW(password, salt);
 

@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94b00d9-2310-4fbe-b1a5-de09e7fc74ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeepLTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepLTranslator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FrontendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FrontendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FrontendController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FrontendController">
+  <component name="RunManager" selected="Application.DeepLTranslator">
+    <configuration name="DeepLTranslator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DeepLTranslator" />
+      <module name="Conjugator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FrontendController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FrontendController" />
       <module name="Conjugator" />
@@ -89,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeepLTranslator" />
         <item itemvalue="Application.FrontendController" />
         <item itemvalue="Application.RemoteDatabaseController" />
       </list>
@@ -105,7 +117,7 @@
       <workItem from="1673349284643" duration="9097000" />
       <workItem from="1675723800081" duration="919000" />
       <workItem from="1675727815894" duration="54000" />
-      <workItem from="1675727920447" duration="524000" />
+      <workItem from="1675727920447" duration="7796000" />
     </task>
     <servers />
   </component>
